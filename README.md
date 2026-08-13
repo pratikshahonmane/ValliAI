@@ -72,6 +72,54 @@ The project is divided into two main parts:
    - Combines model probability and rule-based checks into a final decision
    - Accepts CSV uploads for batch analysis
 
+```mermaid
+flowchart LR
+    A[Customer / Analyst] --> B[React Frontend]
+    B --> C[FastAPI Backend]
+    C --> D[Feature Engineering]
+    D --> E[XGBoost Fraud Model]
+    D --> F[Rules Engine]
+    E --> G[Hybrid Decision Layer]
+    F --> G
+    G --> H[Risk Score / Decision / Recommendation]
+    H --> I[Dashboard + Report + Explainability]
+    H --> J[CSV Batch Review]
+```
+
+## Demo flow
+
+A typical live demo can be shown in this order:
+
+1. Log in to the dashboard and open the overview page
+2. Enter or select a transaction scenario
+3. Submit the transaction to the backend
+4. View the generated risk score, decision, and recommended action
+5. Review rule hits and model-based explanations
+6. Open the reporting view for a deeper breakdown of flagged factors
+7. Upload a CSV file to test batch scoring across many transactions
+
+This flow helps users understand how the system moves from raw transaction data to a clear decision with reasons.
+
+## Presentation summary
+
+ValliAI is a fraud-risk decision support product that turns transaction data into clear risk decisions and human-readable explanations. Instead of showing only a score, it communicates why a payment was flagged and tells the user what action should follow.
+
+For business teams, the value is simple:
+
+- detect suspicious activity faster
+- reduce losses from payment fraud
+- keep customer friction low for safe transactions
+- empower risk analysts with explainable outcomes
+- support operational review with batch analytics
+
+For technical teams, the system demonstrates how to combine:
+
+- business logic rules
+- feature engineering
+- ML prediction
+- API-based deployment
+- front-end decision visibility
+
 ## High-level workflow
 
 1. A transaction is received from the frontend or uploaded CSV
