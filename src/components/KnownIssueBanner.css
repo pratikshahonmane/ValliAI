@@ -1,0 +1,28 @@
+.issue-banner {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: color-mix(in srgb, var(--status-warning) 10%, var(--surface-1));
+  border: 1px solid color-mix(in srgb, var(--status-warning) 45%, transparent);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.issue-banner strong {
+  color: var(--text-primary);
+}
+
+.issue-banner code {
+  background: var(--surface-3);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-size: 12px;
+}
+
+.issue-banner svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}

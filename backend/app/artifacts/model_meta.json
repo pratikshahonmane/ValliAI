@@ -1,0 +1,45 @@
+{
+  "version": "vaaligard-xgb-20260811091342",
+  "trained_at": "2026-08-11T09:13:42.727121+00:00",
+  "feature_order": [
+    "amount_to_customer_average",
+    "cross_border_transaction",
+    "ip_country_mismatch",
+    "transaction_country_mismatch",
+    "merchant_high_risk",
+    "customer_high_risk",
+    "is_new_device",
+    "is_new_beneficiary",
+    "transactions_last_10_minutes",
+    "failed_attempts_last_24_hours",
+    "days_since_last_transaction",
+    "account_age_days",
+    "session_duration_seconds"
+  ],
+  "best_iteration": 118,
+  "thresholds": {
+    "step_up": 0.03,
+    "manual_review": 0.12,
+    "decline": 0.25
+  },
+  "cost_assumptions": {
+    "fraud_loss": 250.0,
+    "action_costs": {
+      "step_up": 12.5,
+      "manual_review": 37.5,
+      "decline": 90.0
+    }
+  },
+  "metrics": {
+    "val_auc": 0.7365,
+    "val_pr_auc": 0.1816,
+    "test_auc": 0.7394,
+    "test_pr_auc": 0.2002
+  },
+  "split": {
+    "train_rows": 38199,
+    "val_rows": 8185,
+    "test_rows": 8186
+  },
+  "fraud_rate": 0.0473
+}
